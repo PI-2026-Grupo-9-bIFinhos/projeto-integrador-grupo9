@@ -1,1 +1,50 @@
 
+/* Remove margens padrão e define a fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estiliza o container principal do menu */
+.menu-navegacao {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+/* Estiliza o logo */
+.menu-navegacao .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Remove as bolinhas da lista e organiza os itens lado a lado */
+.menu-navegacao ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Dá espaçamento aos itens do menu */
+.menu-navegacao ul li {
+    margin-left: 20px;
+}
+
+/* Estiliza os links */
+.menu-navegacao ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.menu-navegacao ul li a:hover {
+    background-color: #555;
+}
