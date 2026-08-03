@@ -68,37 +68,3 @@ h2{
 clr{
     clear: both;
 }
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            padding: 0 20px;
-            color: #333;
-        }
-        h1 {
-            color: #27ae60;
-        }
-        h2 {
-            color: #27ae60;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 5px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        strong {
-            color: #27ae60;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-        }
-    </style>
-
-    
