@@ -49,7 +49,9 @@ h2{
 clr{
     clear: both;
 }
-.margin{
+.margin-l{
     margin-left: 5%
+}
+.margin-r{
     margin-right: 5%
 }
