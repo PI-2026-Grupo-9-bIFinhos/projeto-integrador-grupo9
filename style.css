@@ -1,202 +1,57 @@
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--fonte-texto);
-    background-color: var(--fundo);
-    color: var(--texto);
-    line-height: 1.6;
-}
-
-/* ---------- Navegação ---------- */
-
 .menu-navegacao {
-    background-color: var(--verde-escuro);
+    background-color: #333;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 12px;
-    padding: 16px 32px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    padding: 15px 30px;
 }
-
 .menu-navegacao .logo {
     color: #fff;
-    font-family: var(--fonte-titulo);
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
-    letter-spacing: 0.5px;
 }
-
 .menu-navegacao ul {
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
-    gap: 6px;
 }
-
+.menu-navegacao ul li {
+    margin-left: 20px;
+}
 .menu-navegacao ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
-    padding: 8px 14px;
-    border-radius: 999px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
-
-.menu-navegacao ul li a:hover,
-.menu-navegacao ul li a:focus-visible {
-    background-color: var(--dourado);
-    color: var(--texto);
+.menu-navegacao ul li a:hover {
+    background-color: #555;
 }
-
-/* ---------- Estrutura de conteúdo ---------- */
-/* .margin-l / .margin-r seguem sendo usadas no HTML como
-   "container" da página */
-
-.margin-l,
-.margin-r {
-    max-width: 860px;
-    margin: 32px auto;
-    padding: 40px 48px;
-    background-color: var(--cartao);
-    border: 1px solid var(--borda);
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+h1{
+    color: green;
 }
-
-/* ---------- Tipografia ---------- */
-
-h1 {
-    font-family: var(--fonte-titulo);
-    color: var(--verde-escuro);
-    font-size: 32px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--dourado);
+h2{
+ color: green;
 }
-
-h1:first-child {
-    margin-top: 0;
-}
-
-h2 {
-    font-family: var(--fonte-titulo);
-    color: var(--verde-claro);
-    font-size: 21px;
-    margin-top: 28px;
-    margin-bottom: 10px;
-    padding-left: 12px;
-    border-left: 4px solid var(--dourado);
-}
-
-h3 {
-    font-family: var(--fonte-titulo);
-    color: var(--verde-escuro);
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 8px;
-}
-
-p {
-    margin-bottom: 14px;
-    max-width: 72ch;
-    color: var(--texto);
-}
-
-strong {
-    color: var(--verde-escuro);
-}
-
-em {
-    color: var(--texto-suave);
-}
-
-a {
-    color: var(--verde-claro);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-a:hover,
-a:focus-visible {
-    color: var(--dourado);
-    border-bottom-color: var(--dourado);
-}
-
-/* ---------- Listas ---------- */
-
-ul, ol {
-    margin: 10px 0 16px 22px;
-}
-
-li {
-    margin-bottom: 6px;
-}
-
-li ul, li ol {
-    margin-top: 6px;
-}
-
-/* ---------- Divisores ---------- */
-
-hr {
-    border: none;
-    border-top: 1px dashed var(--borda);
-    margin: 28px 0;
-}
-
-/* ---------- Utilidades ---------- */
-
-.clr {
+clr{
     clear: both;
 }
-
-.text-center {
-    text-align: center;
+.margin-l{
+    margin-left: 5%
 }
-
-/* ---------- Acessibilidade ---------- */
-
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--dourado);
-    outline-offset: 2px;
-}
-
-/* ---------- Responsivo ---------- */
-
-@media (max-width: 700px) {
-    .menu-navegacao {
-        justify-content: center;
-        text-align: center;
-        padding: 14px 18px;
-    }
-
-    .margin-l,
-    .margin-r {
-        margin: 16px;
-        padding: 24px 20px;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 19px;
-    }
+.margin-r{
+    margin-right: 5%
 }
