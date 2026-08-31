@@ -1,57 +1,169 @@
-p {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
+
+body {
+    background-color: #ffffff;
+    color: #2b2b2b;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
 .menu-navegacao {
-    background-color: #333;
+    background-color: #18181b;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-.menu-navegacao .logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
+
+.logo {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
+
 .menu-navegacao ul {
     display: flex;
     list-style: none;
+    gap: 1.5rem;
+    align-items: center;
 }
-.menu-navegacao ul li {
-    margin-left: 20px;
-}
+
 .menu-navegacao ul li a {
-    color: #fff;
+    color: #e4e4e7;
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
+
 .menu-navegacao ul li a:hover {
-    background-color: #555;
+    background-color: #27272a;
+    color: #ffffff;
 }
-h1{
-    color: green;
+
+.conteudo-principal,
+.margin-l {
+    max-width: 860px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem 4rem 1.5rem;
 }
-h2{
- color: green;
+
+/* Compatibilidade com classes anteriores */
+.margin-r {
+    margin-right: auto;
 }
-clr{
+
+.clr {
     clear: both;
 }
-.margin-l{
-    margin-left: 5%
+
+h1 {
+    color: #1e6b37;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
 }
-.margin-r{
-    margin-right: 5%
+
+h2 {
+    color: #2d7a46;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.85rem;
+    border-bottom: 2px solid #e8f5e9;
+    padding-bottom: 0.4rem;
+}
+
+h3 {
+    color: #1e6b37;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1.3rem;
+    color: #374151;
+}
+
+strong {
+    color: #1e6b37;
+}
+
+a {
+    color: #2d7a46;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dotted #2d7a46;
+    transition: border-bottom-style 0.2s, color 0.2s;
+}
+
+a:hover {
+    color: #154d26;
+    border-bottom-style: solid;
+}
+
+.menu-navegacao a {
+    border-bottom: none;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+li::marker {
+    color: #2d7a46;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 2.5rem 0;
+}
+
+.painel-apresentacao {
+    background-color: #f8faf8;
+    border-left: 4px solid #2d7a46;
+    padding: 2rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+}
+
+.painel-apresentacao p {
+    margin-bottom: 0.75rem;
+}
+
+.painel-apresentacao p:last-child {
+    margin-bottom: 0;
+}
+
+.rodape-pagina {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+    border-top: 1px solid #f3f4f6;
+    margin-top: 4rem;
 }
