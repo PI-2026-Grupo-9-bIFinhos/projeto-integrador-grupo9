@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Configurações Gerais e Limpeza
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,12 +17,16 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* ==========================================================================
+   Menu e Barra de Navegação (Alinhamento Vertical Perfeito)
+   ========================================================================== */
+
 .menu-navegacao {
     background-color: #18181b;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Centraliza verticalmente todos os filhos diretos */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -29,12 +37,22 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.5px;
+    line-height: 1; /* Reseta a altura da linha herdada do body */
+    display: flex;
+    align-items: center;
 }
 
 .menu-navegacao ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-navegacao ul li {
+    display: flex;
     align-items: center;
 }
 
@@ -43,8 +61,11 @@ body {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    padding: 0.5rem 0.85rem;
+    padding: 0.6rem 0.85rem;
     border-radius: 6px;
+    line-height: 1; /* Garante cálculo uniforme de altura com padding */
+    display: inline-flex;
+    align-items: center;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -53,6 +74,10 @@ body {
     color: #ffffff;
 }
 
+/* ==========================================================================
+   Estrutura e Layout dos Conteúdos
+   ========================================================================== */
+
 .conteudo-principal,
 .margin-l {
     max-width: 860px;
@@ -60,7 +85,6 @@ body {
     padding: 0 1.5rem 4rem 1.5rem;
 }
 
-/* Compatibilidade com classes anteriores */
 .margin-r {
     margin-right: auto;
 }
@@ -68,6 +92,10 @@ body {
 .clr {
     clear: both;
 }
+
+/* ==========================================================================
+   Tipografia e Detalhes em Verde
+   ========================================================================== */
 
 h1 {
     color: #1e6b37;
@@ -121,6 +149,10 @@ a:hover {
 .menu-navegacao a {
     border-bottom: none;
 }
+
+/* ==========================================================================
+   Listas, Divisores e Blocos
+   ========================================================================== */
 
 ul, ol {
     margin-left: 1.5rem;
