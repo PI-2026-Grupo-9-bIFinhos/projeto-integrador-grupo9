@@ -179,3 +179,33 @@ hr {
     border-top: 1px solid #f3f4f6;
     margin-top: 4rem;
 }
+
+.carrossel {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel-images {
+  display: flex;
+  width: 100%;
+  animation: slide 9s infinite;
+}
+
+.carrossel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  35% { transform: translateX(-100%); }
+  65% { transform: translateX(-100%); }
+  70% { transform: translateX(-200%); }
+  95% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
