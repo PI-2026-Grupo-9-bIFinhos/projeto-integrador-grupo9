@@ -201,7 +201,7 @@ hr {
   object-fit: cover;
 }
 
-@keyframes slide {
+@keyframes scrolling {
   0% { transform: translateX(0); }
   30% { transform: translateX(0); }
   35% { transform: translateX(-100%); }
