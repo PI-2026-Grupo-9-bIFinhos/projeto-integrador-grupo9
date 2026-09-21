@@ -188,10 +188,17 @@ hr {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.carrossel-container {
+  width: 100%;
+  max-width: 600px; 
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 .carrossel-images {
   display: flex;
   width: 100%;
-  animation: slide 9s infinite;
+  animation: slide 9s infinite ease-in-out; 
 }
 
 .carrossel-images img {
@@ -201,7 +208,8 @@ hr {
   object-fit: cover;
 }
 
-@keyframes scrolling {
+
+@keyframes slide {
   0% { transform: translateX(0); }
   30% { transform: translateX(0); }
   35% { transform: translateX(-100%); }
