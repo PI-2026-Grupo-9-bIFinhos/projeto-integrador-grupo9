@@ -27,9 +27,9 @@
     </div>
     <div class="carrossel-container">
       <div class="carrossel-images">
-        <img src="img1.jpg" alt="Foto Alimentos" class="img">
-        <img src="imgs2.jpg" alt="Foto Murilo e Pedro" class="img">
-        <img src="imagem3.jpg" alt="Foto Toledo" class="img">
+        <img src="image.jpg" alt="Foto Alimentos" class="img">
+        <img src="image2.jpg" alt="Foto Murilo e Pedro" class="img">
+        <img src="image3.jpg" alt="Foto Toledo" class="img">
       </div>
     </div>
 </div>
