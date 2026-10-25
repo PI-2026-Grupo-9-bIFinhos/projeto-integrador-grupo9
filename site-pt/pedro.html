@@ -46,9 +46,15 @@
     <h2>Bairro :</h2>
     <p>Moro em <strong>Vila Nova</strong>, uma vila com aproximadamente 2.200 habitantes. Desses 2200 habitates, aproximadamente 1000 moram na área rural, já eu não. Um dos cartões postais da vila é a igreja católica, que fica em frente à praça.</p>
   </main>
- <div class="video-wrapper">
-            <video>
-                <source src="video-pedro.mp4.mp4" type="video/mp4">
-            </video>
+ <div class="video-container">
+        
+        <video controls autoplay muted loop poster="URL_DE_UMA_IMAGEM_DE_CAPA.jpg">
+            <!-- Link do seu vídeo com o ?raw=true no final -->
+            <source src="video-pedro.mp4" type="video/mp4">
+            
+            <!-- Mensagem de fallback caso o navegador seja muito antigo -->
+            Seu navegador não suporta a reprodução de vídeos em HTML5.
+        </video>
+    </div>
 </body>
 </html>
