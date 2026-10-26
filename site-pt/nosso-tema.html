@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nosso-tema.html</title>
+    <title>Home - bIFinhos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,63 +11,74 @@
   <nav class="menu-navegacao">
     <div class="logo">Grupo 9 - bIFinhos</div>
     <ul>
-        <li><a href="index1.html">Início</a></li>
+        <li><a href="site-pt/nosso-tema.html">Nosso tema</a></li>
+        <li><a href="site-pt/pedro.html">Pedro</a></li>
+        <li><a href="site-pt/murilo.html">Murilo</a></li>
+        <li><a href="site-pt/cronica.html">Crônica</a></li>
+    </ul>
+  </nav>
+
+  <main class="conteudo-principal">
+    <div class="painel-apresentacao">
+        <h1>Bem-vindo ao bIFinhos</h1>
+        <p><a href="site-pt/nosso-tema.html">Aprenda sobre a alimentação saudável e a sua situação em Toledo-Pr</a></p>
+        <p>Essa é a página inicial do nosso projeto. Utilize o menu superior para navegar pelas biografia dos integrantes e pelo artigo de saúde alimentar.</p>
+    </div>
+    <div class="carrossel-container">
+      <div class="carrossel-images">
+        <img src="site-pt/imagens/img1.jpg" alt="Foto Alimentos" class="img">
+        <img src="site-pt/imagens/imgs2.jpg" alt="Foto Murilo e Pedro" class="img">
+        <img src="site-pt/imagens/imagem3.jpg" alt="Foto Toledo" class="img">
+      </div>
+    </div>
+  </main>
+  
+  <h2 style="text-align: center;">If you don't speak Portuguese, we have an English version available: <a href="site-eng/index2.html">English version</a></h2> 
+  <h2 style="text-align: center;">Leia no Modo Escuro: <a href="site-escuro/index_esc.html">Modo Escuro</a></h2> 
+  <h2 style="text-align: center;">Read in dark mode: <a href="site_eng-escuro/site_eng-escuro/indexeng_esc.html">Dark Mode</a></h2> 
+
+</body>
+</html>
+2. site-pt/index1.html (Dentro da pasta site-pt)
+O CSS agora usa ../style.css para buscar o arquivo na pasta principal. Os links internos apontam diretamente para os arquivos, já que estão na mesma pasta.
+
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - bIFinhos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="menu-navegacao">
+    <div class="logo">Grupo 9 - bIFinhos</div>
+    <ul>
+        <li><a href="nosso-tema.html">Nosso tema</a></li>
         <li><a href="pedro.html">Pedro</a></li>
         <li><a href="murilo.html">Murilo</a></li>
         <li><a href="cronica.html">Crônica</a></li>
     </ul>
   </nav>
-<main class="conteudo-principal">
-        <h1>Saúde e Alimentação: A Ciência do Bem-Estar</h1>
 
-        <p>Uma alimentação saudável é a base fundamental para a manutenção da vida, prevenção de doenças e promoção da
-            longevidade. Muito além de suprir a fome, a nutrição adequada fornece os <strong>macronutrientes</strong>
-            (carboidratos, proteínas e gorduras) e <strong>micronutrientes</strong> (vitaminas e minerais) essenciais
-            para o funcionamento celular, regulação hormonal e fortalecimento do sistema imunológico.</p>
-
-        <hr>
-
-        <h1>Toledo Paraná - Saúde e Alimentação</h1>
-        <p>A saúde da alimentação em Toledo vai muito bem e a cidade é um dos grandes destaques do Brasil nesse assunto.
-            Diferente de outros lugares onde a saúde só cuida de quem já está doente, em Toledo existe uma rede muito
-            forte que usa a comida de qualidade para evitar que as pessoas adoeçam. Toledo consegue entregar comida
-            barata ou gratuita de altíssima qualidade (através dos seus 8 restaurantes populares e das hortas
-            comunitárias) e usa a estrutura do SUS para ensinar o morador a comer melhor.</p>
-        <hr>
-        <h2>Ações do Município :</h2>
-        <ul>
-            <li><strong>Toledo é + Segurança Alimentar! :</strong> Lançado em outubro de 2022, esse projeto leva os
-                nutricionistas direto para onde o povo está. Equipes vão até os restaurantes populares para dar dicas de
-                pratos saudáveis, medir o peso e fazer um minidiagnóstico nutricional de quem está almoçando. Nas
-                unidades de saúde (UBSs), eles distribuem sal temperado (para ajudar a controlar a pressão alta) e
-                folhetos explicativos. Tudo isso faz parte do <strong>Plano Municipal de Segurança Alimentar e
-                    Nutricional</strong>, que foi desenhado em abril de 2016.</li>
-            <li><strong>Banco de Alimentos:</strong> Inaugurado em abril de 2024 no Jardim São Francisco,
-                combatendo o desperdício pegando comida boa que sobra do comércio e da agricultura e repassando para
-                quem precisa. Eles também têm uma "Cozinha Escola" para ensinar receitas nutritivas e usam uma técnica
-                de desidratação que faz os alimentos durarem mais sem perder os nutrientes.</li>
-            <li><strong>Merenda nota 10 e Escola de Pais : </strong>A alimentação nas escolas e creches municipais
-                (Cmeis) é super controlada pelas nutricionistas da Secretaria de Educação. Toda a merenda é baseada em
-                comida de verdade (comprada direto dos pequenos produtores da região através de leis de incentivo que
-                existem desde 2014). O foco atual está nas ações com as famílias, engajando os pais em palestras para
-                que os bons hábitos cultivados na escola continuem dentro de casa.</li>
-        
-         <!-- ESTRUTURA DO VÍDEO CORRIGIDA E FECHADA -->
-    <div class="video-wrapper">
-        <video controls preload="metadata">
-            <source src="videos-site/video-toledo.mp4" type="video/mp4">
-            Seu navegador não suporta a exibição deste vídeo.
-        </video>
+  <main class="conteudo-principal">
+    <div class="painel-apresentacao">
+        <h1>Bem-vindo ao bIFinhos</h1>
+        <p><a href="nosso-tema.html">Aprenda sobre a alimentação saudável e a sua situação em Toledo-Pr</a></p>
+        <p>Essa é a página inicial do nosso projeto. Utilize o menu superior para navegar pelas biografia dos integrantes e pelo artigo de saúde alimentar.</p>
     </div>
-
-        </ul>
-    <h2>Saiba mais :</h2>
-   <a href="https://www.toledo.pr.gov.br/noticias/administracao/toledo-inaugura-primeiro-banco-de-alimentos-em-parceria-com-governo-do">Toledo inaugura primeiro Banco de Alimentos em parceria com Governo do Estado</a>
-    <br>
-     <a href="https://www.toledo.pr.gov.br/noticias/educacao/escola-de-pais-2026-e-aberta-com-auditorio-lotado-e-foco-na-alimentacao-saudavel">Escola de Pais 2026 é aberta com auditório lotado e foco na alimentação saudável</a>
-    <br>
- <a href="https://www.toledo.pr.gov.br/noticias/educacao/toledo-garante-qualidade-em-refeicoes-de-cmeis-e-escolas-da-rede-municipal">Toledo garante qualidade em refeições de Cmeis e escolas da rede municipal</a>
-</main>
-
+    <div class="carrossel-container">
+      <div class="carrossel-images">
+        <img src="imagens/img1.jpg" alt="Foto Alimentos" class="img">
+        <img src="imagens/imgs2.jpg" alt="Foto Murilo e Pedro" class="img">
+        <img src="imagens/imagem3.jpg" alt="Foto Toledo" class="img">
+      </div>
+    </div>
+  </main>
+  
+  <h2 style="text-align: center;">If you don't speak Portuguese, we have an English version available: <a href="../site-eng/index2.html">English version</a></h2> 
+  <h2 style="text-align: center;">Página Modo Escuro: <a href="../site-escuro/index_esc.html">Modo Escuro</a></h2>
 </body>
 </html>
