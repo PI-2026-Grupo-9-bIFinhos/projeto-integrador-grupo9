@@ -265,3 +265,72 @@ hr {
     height: 70%;
     object-fit: cover; /* Preenche todo o espaço sem distorcer o vídeo */
 }
+/* ==========================================
+   TEMA CLARO (Padrão)
+   ========================================== */
+:root {
+  /* Cores do Menu (Fixo: Preto com letras brancas) */
+  --menu-bg: #1a1a1a;
+  --menu-text: #ffffff;
+
+  /* Cores do Conteúdo da Página */
+  --page-bg: #ffffff;       /* Toda branca */
+  --page-text: #000000;     /* Letras pretas */
+  --highlight-color: #22c55e; /* Detalhes em verde */
+}
+
+/* ==========================================
+   TEMA ESCURO (Ativado pela classe .dark)
+   ========================================== */
+body.dark {
+  /* O menu continua igual (Preto com letras brancas) ou pode escurecer um pouco mais */
+  --menu-bg: #000000;
+  --menu-text: #ffffff;
+
+  /* Inversão do Conteúdo da Página */
+  --page-bg: #121212;       /* Fundo escuro */
+  --page-text: #f5f5f5;     /* Letras brancas/claras */
+  --highlight-color: #4ade80; /* Verde um pouco mais claro para destacar no escuro */
+}
+
+/* ==========================================
+   APLICAÇÃO DAS CORES NOS ELEMENTOS
+   ========================================== */
+body {
+  background-color: var(--page-bg);
+  color: var(--page-text);
+  font-family: sans-serif;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* O seu Menu/Navbar */
+nav {
+  background-color: var(--menu-bg);
+  color: var(--menu-text);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--menu-text);
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* Elementos que devem ser VERDES */
+.texto-verde, strong, h2 {
+  color: var(--highlight-color);
+}
+
+/* Botão de alternar tema */
+#toggle-dark {
+  background: transparent;
+  color: var(--menu-text);
+  border: 1px solid var(--menu-text);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
