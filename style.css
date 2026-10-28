@@ -12,6 +12,10 @@ body {
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
 }
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
 
 .menu-navegacao {
     background-color: #18181b;
