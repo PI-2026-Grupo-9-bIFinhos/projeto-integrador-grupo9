@@ -262,6 +262,5 @@ hr {
     top: 0;
     left: 0;
     width: 50%;
-    height: 50%;
     object-fit: cover; /* Preenche todo o espaço sem distorcer o vídeo */
 }
