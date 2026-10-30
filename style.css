@@ -338,3 +338,17 @@ nav a {
   cursor: pointer;
   border-radius: 4px;
 }
+<style>
+  /* Estilos padrões (Modo Claro) */
+  body {
+    background-color: #ffffff;
+    color: #333333;
+    transition: background 0.3s, color 0.3s; /* Suaviza a transição */
+  }
+
+  /* Estilos quando a classe .dark-mode estiver ativa */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+</style>
