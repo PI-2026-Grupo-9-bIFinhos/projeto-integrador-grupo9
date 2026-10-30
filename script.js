@@ -15,4 +15,3 @@ toggleBtn.addEventListener('click', () => {
   } else {
     localStorage.setItem('dark-mode', 'disabled');
   }
-});
