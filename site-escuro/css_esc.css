@@ -267,4 +267,11 @@ body.dark-mode {
     --background-color: #121212;
     --text-color: #f4f4f4;
 }
-
+/* Mudança dia 30 */
+    .texto-verde, strong, h2 {
+  color: var(--highlight-color);
+}
+     body {
+    background-color: #121212;
+    color: #ffffff;
+  }
