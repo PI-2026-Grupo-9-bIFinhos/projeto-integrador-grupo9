@@ -281,6 +281,7 @@ hr {
   --page-bg: #ffffff;       /* Toda branca */
   --page-text: #000000;     /* Letras pretas */
   --highlight-color: #22c55e; /* Detalhes em verde */
+    --background-color: white;
 }
 
 /* ==========================================
@@ -291,10 +292,6 @@ body.dark {
   --menu-bg: #000000;
   --menu-text: #ffffff;
 
-  /* Inversão do Conteúdo da Página */
-  --page-bg: #121212;       /* Fundo escuro */
-  --page-text: #f5f5f5;     /* Letras brancas/claras */
-  --highlight-color: #4ade80; /* Verde um pouco mais claro para destacar no escuro */
 }
 
 /* ==========================================
@@ -338,7 +335,6 @@ nav a {
   cursor: pointer;
   border-radius: 4px;
 }
-<style>
   /* Estilos padrões (Modo Claro) */
   body {
     background-color: #ffffff;
@@ -351,4 +347,3 @@ nav a {
     background-color: #121212;
     color: #ffffff;
   }
-</style>
