@@ -244,7 +244,7 @@ hr {
 }
 
 /* Container do Vídeo (Proporção 9:16 Responsiva) */
-.video-wrapper {j
+.video-wrapper {
     position: relative;
     width: 100%;
     padding-top: 177.78%; /* Mantém a proporção vertical 9:16 */
