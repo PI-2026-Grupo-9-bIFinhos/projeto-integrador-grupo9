@@ -4,5 +4,5 @@ document.documentElement.style.setProperty('--page-bg', 'red');
   }
 
 function saudaUsuario() {
-     elSaudaUsr.style.display = 'block';
+  document.body.style.backgroundColor = "black";
 }
