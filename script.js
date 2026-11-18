@@ -4,5 +4,6 @@ document.documentElement.style.setProperty('--page-bg', 'red');
   }
 
 function saudaUsuario() {
-  document.body.style.backgroundColor = "black";
+  const elNomeUsr = document.getElementById('nomeUsrEx00');   
+  elNomeUsr.style.backgroundColor = "black";
 }
