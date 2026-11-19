@@ -1,3 +1,6 @@
+/* ==========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +14,12 @@ body {
     font-size: 1rem;
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave entre temas */
 }
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
 
+/* ==========================================
+   MENU DE NAVEGAÇÃO
+   ========================================== */
 .menu-navegacao {
     background-color: #18181b;
     padding: 0.85rem 2rem;
@@ -63,6 +66,7 @@ body.dark-mode {
     display: inline-flex;
     align-items: center;
     transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: none; /* Remove borda dos links do menu */
 }
 
 .menu-navegacao ul li a:hover {
@@ -70,6 +74,9 @@ body.dark-mode {
     color: #ffffff;
 }
 
+/* ==========================================
+   ESTRUTURA E LAYOUT
+   ========================================== */
 .conteudo-principal,
 .margin-l {
     max-width: 860px;
@@ -85,6 +92,9 @@ body.dark-mode {
     clear: both;
 }
 
+/* ==========================================
+   TIPOGRAFIA
+   ========================================== */
 h1 {
     color: #1e6b37;
     font-size: 2rem;
@@ -134,10 +144,6 @@ a:hover {
     border-bottom-style: solid;
 }
 
-.menu-navegacao a {
-    border-bottom: none;
-}
-
 ul, ol {
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
@@ -159,12 +165,16 @@ hr {
     margin: 2.5rem 0;
 }
 
+/* ==========================================
+   COMPONENTES
+   ========================================== */
 .painel-apresentacao {
     background-color: #f8faf8;
     border-left: 4px solid #2d7a46;
     padding: 2rem;
     border-radius: 0 8px 8px 0;
     margin: 2rem 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .painel-apresentacao p {
@@ -183,38 +193,45 @@ hr {
     border-top: 1px solid #f3f4f6;
     margin-top: 4rem;
 }
+
+/* ==========================================
+   CARROSSEL
+   ========================================== */
 .carrossel-container {
-  width: 100%;
-  max-width: 700px; 
-  height: 380px;   
-  margin: 2rem auto;
-  overflow: hidden; 
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 700px; 
+    height: 380px;   
+    margin: 2rem auto;
+    overflow: hidden; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .carrossel-images {
-  display: flex;
-  width: 100%;
-  animation: slide 12s infinite ease-in-out; 
+    display: flex;
+    width: 100%;
+    animation: slide 12s infinite ease-in-out; 
 }
 
 .carrossel-images img {
-  min-width: 100%;
-  width: 100%;
+    min-width: 100%;
+    width: 100%;
 }
 
 @keyframes slide {
-  0%, 28% { transform: translateX(0); }
-  33%, 61% { transform: translateX(-100%); }
-  66%, 94% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
+    0%, 28% { transform: translateX(0); }
+    33%, 61% { transform: translateX(-100%); }
+    66%, 94% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
 }
 
+/* ==========================================
+   CARD DE VÍDEO
+   ========================================== */
 .card-container {
     background: #ffffff;
     width: 100%;
-    max-width: 420px; /* Largura ideal para vídeos em formato vertical (9:16) */
+    max-width: 420px;
     border-radius: 16px;
     padding: 24px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
@@ -223,7 +240,6 @@ hr {
     gap: 16px;
 }
 
-/* Cabeçalho */
 .card-header .tag {
     display: inline-block;
     background-color: #e7f3ff;
@@ -250,11 +266,10 @@ hr {
     line-height: 1.4;
 }
 
-/* Container do Vídeo (Proporção 9:16 Responsiva) */
 .video-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 177.78%; /* Mantém a proporção vertical 9:16 */
+    padding-top: 177.78%; /* Proporção vertical 9:16 */
     background-color: #000000;
     border-radius: 12px;
     overflow: hidden;
@@ -266,94 +281,16 @@ hr {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70%;
-    object-fit: cover; /* Preenche todo o espaço sem distorcer o vídeo */
-}
-/* ==========================================
-   TEMA CLARO (Padrão)
-   ========================================== */
-:root {
-  /* Cores do Menu (Fixo: Preto com letras brancas) */
-  --menu-bg: #1a1a1a;
-  --menu-text: #ffffff;
-
-  /* Cores do Conteúdo da Página */
-  --page-bg: #ffffff;       /* Toda branca */
-  --page-text: #000000;     /* Letras pretas */
-  --highlight-color: #22c55e; /* Detalhes em verde */
-    --background-color: white;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* ==========================================
-   TEMA ESCURO (Ativado pela classe .dark)
-   ========================================== */
-body.dark {
-  /* O menu continua igual (Preto com letras brancas) ou pode escurecer um pouco mais */
-  --menu-bg: #000000;
-  --menu-text: #ffffff;
-
-}
-
-/* ==========================================
-   APLICAÇÃO DAS CORES NOS ELEMENTOS
-   ========================================== */
-body {
-  background-color: var(--page-bg);
-  color: var(--page-text);
-  font-family: sans-serif;
-  margin: 0;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* O seu Menu/Navbar */
-nav {
-  background-color: var(--menu-bg);
-  color: var(--menu-text);
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: var(--menu-text);
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-/* Elementos que devem ser VERDES */
-.texto-verde, strong, h2 {
-  color: var(--highlight-color);
-}
-
-/* Botão de alternar tema */
-#toggle-dark {
-  background: transparent;
-  color: var(--menu-text);
-  border: 1px solid var(--menu-text);
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-  /* Estilos padrões (Modo Claro) */
-  body {
-    background-color: #ffffff;
-    color: #333333;
-    transition: background 0.3s, color 0.3s; /* Suaviza a transição */
-  }
-
-  /* Estilos quando a classe .dark-mode estiver ativa */
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-/* ==========================================
-   ESTILIZAÇÃO DO BOTÃO DE MODO ESCURO
+   BOTÃO DE MUDAR TEMA (MODO CLARO/ESCURO)
    ========================================== */
 #saudacao-usuario {
     display: flex;
-    justify-content: center; /* Centraliza o formulário na página */
+    justify-content: center;
     margin: 2rem 0;
 }
 
@@ -361,22 +298,30 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    background-color: #f8faf8; /* Fundo suave combinando com o painel */
+    background-color: #f8faf8;
     padding: 1.5rem 2rem;
     border-radius: 8px;
     border: 1px solid #e8f5e9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#saudacao-usuario div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 #saudacao-usuario label {
     font-weight: 600;
-    color: #1e6b37; /* Verde do seu tema */
+    color: #1e6b37;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
 #saudacao-usuario button {
-    background-color: #2d7a46; /* Verde principal */
+    background-color: #2d7a46;
     color: #ffffff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -388,20 +333,66 @@ nav a {
 }
 
 #saudacao-usuario button:hover {
-    background-color: #1e6b37; /* Verde mais escuro no hover */
-    transform: translateY(-2px); /* Pequeno efeito de levantar */
+    background-color: #1e6b37;
+    transform: translateY(-2px);
 }
 
 #saudacao-usuario button:active {
-    transform: translateY(0); /* Volta ao normal ao clicar */
+    transform: translateY(0);
 }
 
-/* Ajuste do fundo do formulário no modo escuro */
+/* Ocultar o botão claro por padrão (pois começa no modo claro) */
+#container-claro {
+    display: none;
+}
+
+/* ==========================================
+   REGRAS DO MODO ESCURO (DARK MODE ATIVO)
+   ========================================== */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Muda a cor dos textos e listas no modo escuro */
+body.dark-mode p, 
+body.dark-mode li {
+    color: #e5e7eb;
+}
+
+/* Clareia os tons de verde para ter contraste no fundo preto */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode strong {
+    color: #4ade80;
+}
+
+body.dark-mode a {
+    color: #4ade80;
+}
+
+body.dark-mode h2 {
+    border-bottom: 2px solid #333333;
+}
+
+/* Escurece o painel de apresentação e formulário */
+body.dark-mode .painel-apresentacao,
 body.dark-mode #saudacao-usuario form {
     background-color: #1e1e1e;
-    border-color: #333;
+    border-color: #333333;
+    border-left-color: #4ade80;
 }
-body.light-mode #saudacao-usuario form {
-    background-color: #FFFFFF;
-    border-color: #FFFFFF;
+
+body.dark-mode #saudacao-usuario label {
+    color: #4ade80;
+}
+
+/* Troca a visibilidade dos botões no modo escuro */
+body.dark-mode #container-escuro {
+    display: none;
+}
+
+body.dark-mode #container-claro {
+    display: flex;
 }
