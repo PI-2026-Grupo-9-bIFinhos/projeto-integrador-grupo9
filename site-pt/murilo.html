@@ -58,18 +58,17 @@
           </video>
       </div>
   </main>
-
-<section id="saudacao-usuario">
-            <form class="tabela-CSS">
-                <div>
-                    <label for="nomeUsrEx00"> Leia no Modo Escuro:</label>
-                </div>
-                <div>
-                    <button type="button" onclick="saudaUsuario()">Modo Escuro</button>
-                </div>
-            </form>
-
-        </section>
-         
+ <script src="script.js"></script>
 </body>
 </html>
+
+
+function ativarModoEscuro() {
+    // Adiciona a classe dark-mode no body (Ativa o CSS escuro)
+    document.body.classList.add("dark-mode");
+}
+
+function ativarModoClaro() {
+    // Remove a classe dark-mode do body (Volta ao normal)
+    document.body.classList.remove("dark-mode");
+}
