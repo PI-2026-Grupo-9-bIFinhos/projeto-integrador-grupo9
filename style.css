@@ -396,3 +396,6 @@ body.dark-mode #container-escuro {
 body.dark-mode #container-claro {
     display: flex;
 }
+#container-claro {
+    display: none; /* Deixa invisível logo que a página carrega */
+}
