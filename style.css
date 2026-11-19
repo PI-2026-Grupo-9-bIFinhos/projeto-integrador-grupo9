@@ -341,9 +341,9 @@ hr {
     transform: translateY(0);
 }
 
-/* Ocultar o botão claro por padrão (pois começa no modo claro) */
+/* Deixa invisível logo que a página carrega */
 #container-claro {
-    display: none;
+    display: none; 
 }
 
 /* ==========================================
@@ -395,7 +395,4 @@ body.dark-mode #container-escuro {
 
 body.dark-mode #container-claro {
     display: flex;
-}
-#container-claro {
-    display: none; /* Deixa invisível logo que a página carrega */
 }
