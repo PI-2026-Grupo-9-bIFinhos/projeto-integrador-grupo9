@@ -327,3 +327,57 @@ nav a {
   cursor: pointer;
   border-radius: 4px;
 }
+
+/* ==========================================
+   ESTILIZAÇÃO DO BOTÃO DE MODO ESCURO
+   ========================================== */
+#saudacao-usuario {
+    display: flex;
+    justify-content: center; /* Centraliza o formulário na página */
+    margin: 2rem 0;
+}
+
+#saudacao-usuario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #f8faf8; /* Fundo suave combinando com o painel */
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #e8f5e9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#saudacao-usuario label {
+    font-weight: 600;
+    color: #1e6b37; /* Verde do seu tema */
+    font-size: 1.1rem;
+}
+
+#saudacao-usuario button {
+    background-color: #2d7a46; /* Verde principal */
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#saudacao-usuario button:hover {
+    background-color: #1e6b37; /* Verde mais escuro no hover */
+    transform: translateY(-2px); /* Pequeno efeito de levantar */
+}
+
+#saudacao-usuario button:active {
+    transform: translateY(0); /* Volta ao normal ao clicar */
+}
+
+/* Ajuste do fundo do formulário no modo escuro */
+body.dark-mode #saudacao-usuario form {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
