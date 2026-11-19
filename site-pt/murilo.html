@@ -58,17 +58,27 @@
           </video>
       </div>
   </main>
+         <!-- Área de Troca de Tema -->
+  <section id="saudacao-usuario">
+    <form class="tabela-CSS">
+        
+        <!-- Aparece no Modo Claro -->
+        <div id="container-escuro">
+            <label>Leia no Modo Escuro:</label>
+            <button type="button" onclick="ativarModoEscuro()">Mudar para Escuro</button>
+        </div> 
+        
+        <!-- Aparece no Modo Escuro -->
+        <div id="container-claro"> 
+            <label>Leia no Modo Claro:</label>
+            <button type="button" onclick="ativarModoClaro()">Mudar para Claro</button> 
+        </div> 
+        
+    </form> 
+      
  <script src="script.js"></script>
 </body>
 </html>
 
 
-function ativarModoEscuro() {
-    // Adiciona a classe dark-mode no body (Ativa o CSS escuro)
-    document.body.classList.add("dark-mode");
-}
 
-function ativarModoClaro() {
-    // Remove a classe dark-mode do body (Volta ao normal)
-    document.body.classList.remove("dark-mode");
-}
