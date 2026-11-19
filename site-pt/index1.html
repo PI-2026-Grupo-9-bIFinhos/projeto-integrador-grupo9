@@ -5,47 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - bIFinhos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
+  <!-- Menu Superior -->
   <nav class="menu-navegacao">
     <div class="logo">Grupo 9 - bIFinhos</div>
     <ul>
-        <li><a href="nosso-tema.html">Nosso tema</a></li>
-        <li><a href="pedro.html">Pedro</a></li>
-        <li><a href="murilo.html">Murilo</a></li>
-        <li><a href="cronica.html">Crônica</a></li>
+        <li><a href="site-pt/nosso-tema.html">Nosso tema</a></li>
+        <li><a href="site-pt/pedro.html">Pedro</a></li>
+        <li><a href="site-pt/murilo.html">Murilo</a></li>
+        <li><a href="site-pt/cronica.html">Crônica</a></li>
     </ul>
   </nav>
 
+  <!-- Conteúdo Principal -->
   <main class="conteudo-principal">
-    <div class="painel-apresentacao" id="dark">
+    
+    <div class="painel-apresentacao">
         <h1>Bem-vindo ao bIFinhos</h1>
         <p><a href="nosso-tema.html">Aprenda sobre a alimentação saudável e a sua situação em Toledo-Pr</a></p>
-        <p>Essa é a página inicial do nosso projeto. Utilize o menu superior para navegar pelas biografia dos integrantes e pelo artigo de saúde alimentar.</p>
+        <p>Essa é a página inicial do nosso projeto. Utilize o menu superior para navegar pelas biografias dos integrantes e pelo artigo de saúde alimentar.</p>
     </div>
+    
+    <!-- Carrossel -->
     <div class="carrossel-container">
       <div class="carrossel-images">
-        <img src="imagens/img1.jpg" alt="Foto Alimentos" class="img">
-        <img src="imagens/imgs2.jpg" alt="Foto Murilo e Pedro" class="img">
-        <img src="imagens/imagem3.jpg" alt="Foto Toledo" class="img">
+        <img src="site-pt/imagens/img1.jpg" alt="Foto Alimentos">
+        <img src="site-pt/imagens/imgs2.jpg" alt="Foto Murilo e Pedro">
+        <img src="site-pt/imagens/imagem3.jpg" alt="Foto Toledo">
       </div>
     </div>
+
   </main>
-       <h2 style="text-align : center ">If you don't speak Portuguese, we have an English version available : <a href="site-eng/index2.html">English version</a> </h2> 
-
-<section id="saudacao-usuario">
-            <form class="tabela-CSS">
-                <div>
-                    <label for="nomeUsrEx00"> Leia no Modo Escuro:</label>
-                </div>
-                <div>
-                    <button type="button" onclick="saudaUsuario()">Modo Escuro</button>
-                </div>
-            </form>
-
-        </section>
+ 
+  <!-- Área de Troca de Tema -->
+  <section id="saudacao-usuario">
+    <form class="tabela-CSS">
+        
+        <!-- Aparece no Modo Claro -->
+        <div id="container-escuro">
+            <label>Leia no Modo Escuro:</label>
+            <button type="button" onclick="ativarModoEscuro()">Mudar para Escuro</button>
+        </div> 
+        
+        <!-- Aparece no Modo Escuro -->
+        <div id="container-claro"> 
+            <label>Leia no Modo Claro:</label>
+            <button type="button" onclick="ativarModoClaro()">Mudar para Claro</button> 
+        </div> 
+        
+    </form> 
+  </section> 
     
+  <!-- Rodapé -->
+  <h2 class="rodape-idioma">If you don't speak Portuguese, we have an English version available: <a href="site-eng/index2.html">English version</a></h2>
+
+  <!-- Script no final da página -->
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+function ativarModoEscuro() {
+    // Adiciona a classe dark-mode no body (Ativa o CSS escuro)
+    document.body.classList.add("dark-mode");
+}
+
+function ativarModoClaro() {
+    // Remove a classe dark-mode do body (Volta ao normal)
+    document.body.classList.remove("dark-mode");
+}
