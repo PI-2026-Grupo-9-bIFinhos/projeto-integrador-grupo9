@@ -15,7 +15,7 @@ function saudaUsuario2() {
   const light = document.getElementById('white');   
   const white = document.getElementById('white');   
   document.body.style.backgroundColor = "white";
-  dark.style.backgroundColor = "white";
-  black.style.backgroundColor = "white";
-  black.style.border = " #000000 solid"
+  light.style.backgroundColor = "white";
+  white.style.backgroundColor = "white";
+  whites.style.border = " #000000 solid"
 }
