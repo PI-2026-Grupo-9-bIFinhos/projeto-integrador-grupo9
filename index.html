@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - bIFinhos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
@@ -35,26 +34,25 @@
     </div>
   </main>
  
-  <!-- AQUI ESTÁ A MÁGICA: Juntamos os dois botões no mesmo form com os IDs certos -->
   <section id="saudacao-usuario">
     <form class="tabela-CSS">
-        
-        <!-- Aparece quando o site carrega (Modo Claro) -->
+        <!-- Botão Escuro -->
         <div id="container-escuro">
             <label>Leia no Modo Escuro:</label>
             <button type="button" onclick="ativarModoEscuro()">Modo Escuro</button>
         </div> 
         
-        <!-- O CSS vai esconder este automaticamente quando o site carregar -->
+        <!-- Botão Claro -->
         <div id="container-claro"> 
             <label>Leia no Modo Claro:</label>
             <button type="button" onclick="ativarModoClaro()">Modo Claro</button> 
         </div> 
-        
     </form> 
   </section> 
     
   <h2 style="text-align: center;">If you don't speak Portuguese, we have an English version available: <a href="site-eng/index2.html">English version</a></h2>
 
+  <!-- O script fica no final para carregar mais rápido -->
+  <script src="script.js"></script>
 </body>
 </html>
