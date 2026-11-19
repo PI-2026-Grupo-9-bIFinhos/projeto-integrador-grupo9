@@ -4,7 +4,6 @@ document.documentElement.style.setProperty('--page-bg', 'red');
   }
 
 function saudaUsuario() {
-function mudaCorFundo() {
   console.log('Estou aqui');
   const corBGAtual = document.body.style.backgroundColor.trim().toUpperCase();
   console.log(corBGAtual);
@@ -19,4 +18,3 @@ function mudaCorFundo() {
   }
 
   }
-}
