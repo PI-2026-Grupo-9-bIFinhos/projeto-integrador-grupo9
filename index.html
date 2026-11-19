@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - bIFinhos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"> </script>
+    <script src="script.js"></script>
 </head>
-<body id="nomeUsrEx00">
+<body>
 
   <nav class="menu-navegacao">
     <div class="logo">Grupo 9 - bIFinhos</div>
@@ -20,7 +20,7 @@
   </nav>
 
   <main class="conteudo-principal">
-    <div class="painel-apresentacao" id="dark">
+    <div class="painel-apresentacao">
         <h1>Bem-vindo ao bIFinhos</h1>
         <p><a href="nosso-tema.html">Aprenda sobre a alimentação saudável e a sua situação em Toledo-Pr</a></p>
         <p>Essa é a página inicial do nosso projeto. Utilize o menu superior para navegar pelas biografia dos integrantes e pelo artigo de saúde alimentar.</p>
@@ -32,27 +32,24 @@
         <img src="site-pt/imagens/imagem3.jpg" alt="Foto Toledo" class="img">
       </div>
     </div>
-</div>
- </main>
+  </main>
  
-<section id="saudacao-usuario">
-    <form class="tabela-CSS" id="black">
-        <div>
-            <label for="nomeUsrEx00"> Leia no Modo Escuro:</label>
+  <section id="saudacao-usuario">
+    <form class="tabela-CSS">
+        <!-- Container do Modo Escuro (Aparece no modo claro) -->
+        <div id="container-escuro">
+            <label>Leia no Modo Escuro:</label>
+            <button type="button" onclick="ativarModoEscuro()">Modo Escuro</button>
         </div> 
-        <div> 
-            <button type="button" onclick="saudaUsuario()">Modo Escuro</button>
+        
+        <!-- Container do Modo Claro (Aparece no modo escuro) -->
+        <div id="container-claro"> 
+            <label>Leia no Modo Claro:</label>
+            <button type="button" onclick="ativarModoClaro()">Modo Claro</button> 
         </div> 
     </form> 
-</section> 
+  </section> 
     
-    <section id="saudacao-usuario"> 
-        <form class="tabela-CSS" id="white"> 
-            <div> <label for="nomeUsrEx00"> Leia no Modo Claro :</label> </div>
-            <div> <button type="button" onclick="saudaUsuario2()">Modo Claro</button> 
-            </div> 
-        </form>
-    </section>
-<h2 style="text-align : center ">If you don't speak Portuguese, we have an English version available : <a href="site-eng//index2.html">English version</a> </h2>
+  <h2 style="text-align: center;">If you don't speak Portuguese, we have an English version available: <a href="site-eng/index2.html">English version</a></h2>
 </body>
 </html>
