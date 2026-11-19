@@ -1,349 +1,10 @@
 /* ==========================================
-   RESET E CONFIGURAÇÕES GERAIS
+   CONTROLE DE VISIBILIDADE DOS BOTÕES
    ========================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    background-color: #ffffff;
-    color: #2b2b2b;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave entre temas */
-}
-
-/* ==========================================
-   MENU DE NAVEGAÇÃO
-   ========================================== */
-.menu-navegacao {
-    background-color: #18181b;
-    padding: 0.85rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    color: #ffffff;
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-}
-
-.menu-navegacao ul {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.menu-navegacao ul li {
-    display: flex;
-    align-items: center;
-}
-
-.menu-navegacao ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 0.6rem 0.9rem;
-    border-radius: 6px;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    border-bottom: none; /* Remove borda dos links do menu */
-}
-
-.menu-navegacao ul li a:hover {
-    background-color: #27272a;
-    color: #ffffff;
-}
-
-/* ==========================================
-   ESTRUTURA E LAYOUT
-   ========================================== */
-.conteudo-principal,
-.margin-l {
-    max-width: 860px;
-    margin: 2.5rem auto;
-    padding: 0 1.5rem 4rem 1.5rem;
-}
-
-.margin-r {
-    margin-right: auto;
-}
-
-.clr {
-    clear: both;
-}
-
-/* ==========================================
-   TIPOGRAFIA
-   ========================================== */
-h1 {
-    color: #1e6b37;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.3;
-}
-
-h2 {
-    color: #2d7a46;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 0.85rem;
-    border-bottom: 2px solid #e8f5e9;
-    padding-bottom: 0.4rem;
-}
-
-h3 {
-    color: #1e6b37;
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-}
-
-p {
-    margin-bottom: 1.3rem;
-    color: #374151;
-}
-
-strong {
-    color: #1e6b37;
-}
-
-a {
-    color: #2d7a46;
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px dotted #2d7a46;
-    transition: border-bottom-style 0.2s, color 0.2s;
-}
-
-a:hover {
-    color: #154d26;
-    border-bottom-style: solid;
-}
-
-ul, ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-    color: #374151;
-}
-
-li::marker {
-    color: #2d7a46;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #e5e7eb;
-    margin: 2.5rem 0;
-}
-
-/* ==========================================
-   COMPONENTES
-   ========================================== */
-.painel-apresentacao {
-    background-color: #f8faf8;
-    border-left: 4px solid #2d7a46;
-    padding: 2rem;
-    border-radius: 0 8px 8px 0;
-    margin: 2rem 0;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.painel-apresentacao p {
-    margin-bottom: 0.75rem;
-}
-
-.painel-apresentacao p:last-child {
-    margin-bottom: 0;
-}
-
-.rodape-pagina {
-    text-align: center;
-    padding: 2rem;
-    color: #6b7280;
-    font-size: 0.875rem;
-    border-top: 1px solid #f3f4f6;
-    margin-top: 4rem;
-}
-
-/* ==========================================
-   CARROSSEL
-   ========================================== */
-.carrossel-container {
-    width: 100%;
-    max-width: 700px; 
-    height: 380px;   
-    margin: 2rem auto;
-    overflow: hidden; 
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.carrossel-images {
-    display: flex;
-    width: 100%;
-    animation: slide 12s infinite ease-in-out; 
-}
-
-.carrossel-images img {
-    min-width: 100%;
-    width: 100%;
-}
-
-@keyframes slide {
-    0%, 28% { transform: translateX(0); }
-    33%, 61% { transform: translateX(-100%); }
-    66%, 94% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-}
-
-/* ==========================================
-   CARD DE VÍDEO
-   ========================================== */
-.card-container {
-    background: #ffffff;
-    width: 100%;
-    max-width: 420px;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.card-header .tag {
-    display: inline-block;
-    background-color: #e7f3ff;
-    color: #1877f2;
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-}
-
-.card-header h1 {
-    font-size: 1.35rem;
-    line-height: 1.3;
-    color: #050505;
-    margin-bottom: 6px;
-}
-
-.card-header p {
-    font-size: 0.9rem;
-    color: #65676b;
-    line-height: 1.4;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 177.78%; /* Proporção vertical 9:16 */
-    background-color: #000000;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ==========================================
-   BOTÃO DE MUDAR TEMA (MODO CLARO/ESCURO)
-   ========================================== */
-#saudacao-usuario {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
-#saudacao-usuario form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f8faf8;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    border: 1px solid #e8f5e9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-#saudacao-usuario div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-#saudacao-usuario label {
-    font-weight: 600;
-    color: #1e6b37;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-#saudacao-usuario button {
-    background-color: #2d7a46;
-    color: #ffffff;
-    border: none;
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-#saudacao-usuario button:hover {
-    background-color: #1e6b37;
-    transform: translateY(-2px);
-}
-
-#saudacao-usuario button:active {
-    transform: translateY(0);
-}
-
-/* Deixa invisível logo que a página carrega */
-#container-claro {
-    display: none; 
+/* Esconde o botão CLARO por padrão (A força do ID duplo vence o display: flex) */
+#saudacao-usuario #container-claro {
+    display: none;
 }
 
 /* ==========================================
@@ -354,13 +15,11 @@ body.dark-mode {
     color: #ffffff;
 }
 
-/* Muda a cor dos textos e listas no modo escuro */
 body.dark-mode p, 
 body.dark-mode li {
     color: #e5e7eb;
 }
 
-/* Clareia os tons de verde para ter contraste no fundo preto */
 body.dark-mode h1, 
 body.dark-mode h2, 
 body.dark-mode h3, 
@@ -376,7 +35,6 @@ body.dark-mode h2 {
     border-bottom: 2px solid #333333;
 }
 
-/* Escurece o painel de apresentação e formulário */
 body.dark-mode .painel-apresentacao,
 body.dark-mode #saudacao-usuario form {
     background-color: #1e1e1e;
@@ -388,11 +46,11 @@ body.dark-mode #saudacao-usuario label {
     color: #4ade80;
 }
 
-/* Troca a visibilidade dos botões no modo escuro */
-body.dark-mode #container-escuro {
+/* Quando o dark mode ativa: Esconde o ESCURO e Mostra o CLARO */
+body.dark-mode #saudacao-usuario #container-escuro {
     display: none;
 }
 
-body.dark-mode #container-claro {
+body.dark-mode #saudacao-usuario #container-claro {
     display: flex;
 }
