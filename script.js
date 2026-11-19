@@ -9,7 +9,7 @@ function saudaUsuario() {
   document.body.style.backgroundColor = "#000000";
   dark.style.backgroundColor = "#000000";
   black.style.backgroundColor = "#000000";
-  black.style.border = " #000000 solid"
+  black.style.border = " #000000 solid";
 }
 function saudaUsuario2() {
   const light = document.getElementById('white');   
@@ -17,5 +17,6 @@ function saudaUsuario2() {
   document.body.style.backgroundColor = "white";
   light.style.backgroundColor = "white";
   white.style.backgroundColor = "white";
-  whites.style.border = "white solid"
+  white.style.border = "white solid";
+  
 }
