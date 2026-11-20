@@ -1,4 +1,3 @@
-
 /* ==========================================
    RESET E FONTES
    ========================================== */
@@ -8,12 +7,17 @@
     box-sizing: border-box;
 }
 
+/* Aplicando margem em toda a página e centralizando o conteúdo */
 body {
     background-color: #ffffff;
     color: #2b2b2b;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.75;
     transition: background-color 0.4s ease, color 0.4s ease;
+    margin: 2rem 4rem; /* Margem de 2rem em cima/embaixo e 4rem nas laterais */
+    max-width: 1200px; /* Limita a largura máxima para não esticar demais em monitores grandes */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ==========================================
@@ -25,9 +29,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    border-radius: 12px; /* Arredondado para acompanhar a margem da página */
+    margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -57,12 +60,12 @@ body {
     background-color: #2d7a46;
 }
 
-* ==========================================
-   CONTEÚDO PRINCIPAL
+/* ==========================================
+   CONTEÚDO PRINCIPAL & TIPOGRAFIA
    ========================================== */
 .conteudo-principal {
     max-width: 900px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 0 1.5rem;
 }
 
@@ -76,16 +79,32 @@ body {
     transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
+/* H1 sempre verde e destacado */
 h1 {
-    color: #1e6b37;
+    color: #1e6b37; /* Verde forte */
     font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+h2 {
+    color: #2d7a46;
+    font-size: 1.4rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    border-bottom: 2px solid #e8f5e9;
+    padding-bottom: 0.4rem;
 }
 
 p {
     font-size: 1.1rem;
     color: #374151;
     margin-bottom: 1rem;
+}
+
+strong {
+    color: #1e6b37;
+    font-weight: 700;
 }
 
 a {
@@ -98,13 +117,20 @@ a:hover {
     text-decoration: underline;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 3rem 0;
+}
+
 /* ==========================================
-   CARROSSEL
+   CARROSSEL (Página Inicial)
    ========================================== */
 .carrossel-container {
     width: 100%;
-    max-width: 820px; 
-    height: 620px;   
+    max-width: 800px; 
+    height: 400px;   
     margin: 3rem auto;
     overflow: hidden; 
     border-radius: 12px;
@@ -122,7 +148,7 @@ a:hover {
     min-width: 100%;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem preencher o espaço bonito */
+    object-fit: cover; 
 }
 
 @keyframes slide {
@@ -130,6 +156,24 @@ a:hover {
     33%, 61% { transform: translateX(-100%); }
     66%, 94% { transform: translateX(-200%); }
     100% { transform: translateX(0); }
+}
+
+/* ==========================================
+   VÍDEO CENTRALIZADO (Páginas Individuais)
+   ========================================== */
+.video-centralizado {
+    max-width: 650px; 
+    margin: 3rem auto; 
+    border-radius: 16px; 
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+    background-color: #000; 
+}
+
+.video-centralizado video {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
 }
 
 /* ==========================================
@@ -182,7 +226,7 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* CONTROLE DE VISIBILIDADE (A MÁGICA ACONTECE AQUI) */
+/* CONTROLE DE VISIBILIDADE DOS BOTÕES */
 #container-escuro { display: flex !important; }
 #container-claro { display: none !important; }
 
@@ -196,7 +240,7 @@ a:hover {
 }
 
 /* ==========================================
-   MODO ESCURO (QUANDO ATIVADO NO JS)
+   MODO ESCURO (QUANDO ATIVADO)
    ========================================== */
 body.dark-mode {
     background-color: #121212;
@@ -208,10 +252,16 @@ body.dark-mode .rodape-idioma {
     color: #d1d5db;
 }
 
-body.dark-mode h1, 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode strong,
 body.dark-mode label,
 body.dark-mode a {
-    color: #4ade80;
+    color: #4ade80; /* Um verde mais claro e neon para brilhar no fundo preto */
+}
+
+body.dark-mode h2 {
+    border-bottom: 2px solid #333333;
 }
 
 body.dark-mode .painel-apresentacao,
@@ -224,8 +274,23 @@ body.dark-mode #saudacao-usuario form {
 body.dark-mode .menu-navegacao ul li a:hover {
     background-color: #4ade80;
     color: #121212;
-}/
+}
 
-/* TROCA OS BOTÕES NO MODO ESCURO */
 body.dark-mode #container-escuro { display: none !important; }
 body.dark-mode #container-claro { display: flex !important; }
+
+/* Responsividade Básica para Celulares */
+@media (max-width: 768px) {
+    body {
+        margin: 1rem; /* Margem menor em telas pequenas para aproveitar espaço */
+    }
+    .menu-navegacao {
+        flex-direction: column;
+        gap: 1rem;
+        border-radius: 8px;
+    }
+    .menu-navegacao ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
