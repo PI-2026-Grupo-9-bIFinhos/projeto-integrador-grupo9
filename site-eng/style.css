@@ -170,7 +170,7 @@ hr {
 .video-centralizado video {
     width: 100%;
     display: block;
-    border-radius: 20px; /* Mantém a borda do vídeo redonda */
+    border-radius: 100px; /* Mantém a borda do vídeo redonda */
 }
 
 /* ==========================================
