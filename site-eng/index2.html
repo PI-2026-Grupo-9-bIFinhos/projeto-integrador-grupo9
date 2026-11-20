@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - bIFinhos</title>
     <link rel="stylesheet" href="style.css">
-     <script src="script.js"></script>
 </head>
 <body>
 
@@ -35,17 +34,23 @@
     </div>
 </div>
  </main>
-
-<section id="saudacao-usuario">
-            <form class="tabela-CSS">
-                <div>
-                    <label for="nomeUsrEx00"> Leia no Modo Escuro:</label>
-                </div>
-                <div>
-                    <button type="button" onclick="saudaUsuario()">Modo Escuro</button>
-                </div>
-            </form>
-
-        </section>
+ <section id="saudacao-usuario">
+    <form class="tabela-CSS">
+        
+        <!-- Aparece no Modo Claro -->
+        <div id="container-escuro">
+            <label>Leia no Modo Escuro:</label>
+            <button type="button" onclick="ativarModoEscuro()">Mudar para Escuro</button>
+        </div> 
+        
+        <!-- Aparece no Modo Escuro -->
+        <div id="container-claro"> 
+            <label>Leia no Modo Claro:</label>
+            <button type="button" onclick="ativarModoClaro()">Mudar para Claro</button> 
+        </div> 
+        
+    </form> 
+      
+ <script src="script.js"></script>
 </body>
 </html>
