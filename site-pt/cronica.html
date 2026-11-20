@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crônica PI e Português</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
@@ -30,17 +29,24 @@
         <p>Era um dia qualquer na cidade de São Paulo, em que uma família vivia a sua rotina, viviam na casa: um pai, uma mãe e um filho de 17 anos. O filho sempre foi de ficar nas custas de sua mãe, ganhava tudo o que queria, pedia as coisas e sua mãe logo fazia. Pedia para ela cozinhar várias coisas, mas sua mãe sempre colocava alimentos que ajudassem na saúde. Passado um ano, o filho completava 18 anos e logo viu a oportunidade de sair de casa e ir morar sozinho, sua mãe arrumou as suas coisas e disse, continue cuidando da sua alimentação.<br> O filho nos primeiros dias nem ligou para o que sua mãe disse, gastou todo seu dinheiro com comidas hipercalóricas, que não o nutriam, engordando muito, foi aí decidiu mudar de vida. Foi ao mercado e comprou vários alimentos que diziam ser fit, light ou sem caloria, passado uma semana comendo esses alimentos percebeu que não estava mais disposto e que estava ficando doente. Foi à casa de sua mãe em que ela lhe explicou, falando que não era isso que ia ajudar na saúde dele, mas sim uma refeição rica que tivesse vários nutrientes. Foi ao mercado comprou alimentos que sua mãe indicou como: arroz, feijão, salada e carnes, cuidou mais da sua alimentação, emagrecendo e ficando bem de saúde.<br> Foi nesse momento em que aprendeu a lição, uma alimentação saudável é aquela em que tem variedades de macronutrientes (carboidratos, proteínas e lipídeos) e micronutrientes (vitaminas e sais minerais) e não aqueles alimentos que se diziam ser bons.</p>
     </main>
 
-<section id="saudacao-usuario">
-            <form class="tabela-CSS">
-                <div>
-                    <label for="nomeUsrEx00"> Leia no Modo Escuro:</label>
-                </div>
-                <div>
-                    <button type="button" onclick="saudaUsuario()">Modo Escuro</button>
-                </div>
-            </form>
 
-        </section>
-    
+ <section id="saudacao-usuario">
+    <form class="tabela-CSS">
+        
+        <!-- Aparece no Modo Claro -->
+        <div id="container-escuro">
+            <label>Leia no Modo Escuro:</label>
+            <button type="button" onclick="ativarModoEscuro()">Mudar para Escuro</button>
+        </div> 
+        
+        <!-- Aparece no Modo Escuro -->
+        <div id="container-claro"> 
+            <label>Leia no Modo Claro:</label>
+            <button type="button" onclick="ativarModoClaro()">Mudar para Claro</button> 
+        </div> 
+        
+    </form> 
+      
+ <script src="script.js"></script>
 </body>
 </html>
