@@ -7,21 +7,17 @@
     box-sizing: border-box;
 }
 
-/* Aplicando margem em toda a página e centralizando o conteúdo */
+/* Corpo sem margem, para o menu poder encostar nas bordas da tela */
 body {
     background-color: #ffffff;
     color: #2b2b2b;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.75;
     transition: background-color 0.4s ease, color 0.4s ease;
-    margin: 2rem 4rem; /* Margem de 2rem em cima/embaixo e 4rem nas laterais */
-    max-width: 1200px; /* Limita a largura máxima para não esticar demais em monitores grandes */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* ==========================================
-   MENU DE NAVEGAÇÃO
+   MENU DE NAVEGAÇÃO (Normal e grudado no topo)
    ========================================== */
 .menu-navegacao {
     background-color: #18181b;
@@ -29,8 +25,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 12px; /* Arredondado para acompanhar a margem da página */
-    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -61,12 +58,12 @@ body {
 }
 
 /* ==========================================
-   CONTEÚDO PRINCIPAL & TIPOGRAFIA
+   CONTEÚDO PRINCIPAL (Aqui aplicamos a margem do site)
    ========================================== */
 .conteudo-principal {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    max-width: 1100px;
+    margin: 2rem auto; /* Margem em cima e embaixo */
+    padding: 0 4rem;   /* Margem nas laterais */
 }
 
 .painel-apresentacao {
@@ -81,7 +78,7 @@ body {
 
 /* H1 sempre verde e destacado */
 h1 {
-    color: #1e6b37; /* Verde forte */
+    color: #1e6b37;
     font-size: 2.2rem;
     margin-bottom: 1.2rem;
     margin-top: 1.5rem;
@@ -159,7 +156,7 @@ hr {
 }
 
 /* ==========================================
-   VÍDEO CENTRALIZADO (Páginas Individuais)
+   VÍDEO CENTRALIZADO COM BORDAS ARREDONDADAS
    ========================================== */
 .video-centralizado {
     max-width: 650px; 
@@ -173,7 +170,7 @@ hr {
 .video-centralizado video {
     width: 100%;
     display: block;
-    border-radius: 16px;
+    border-radius: 16px; /* Mantém a borda do vídeo redonda */
 }
 
 /* ==========================================
@@ -182,7 +179,9 @@ hr {
 #saudacao-usuario {
     display: flex;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 3rem auto;
+    max-width: 1100px;
+    padding: 0 4rem; /* Mesma margem lateral do conteúdo */
 }
 
 #saudacao-usuario form {
@@ -193,6 +192,8 @@ hr {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: background-color 0.4s ease, border-color 0.4s ease;
     text-align: center;
+    width: 100%;
+    max-width: 500px;
 }
 
 #saudacao-usuario div {
@@ -235,8 +236,9 @@ hr {
     text-align: center;
     font-size: 1.1rem;
     color: #4b5563;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 2rem 4rem;
+    margin: 0 auto 2rem auto;
+    max-width: 1100px;
 }
 
 /* ==========================================
@@ -257,7 +259,7 @@ body.dark-mode h2,
 body.dark-mode strong,
 body.dark-mode label,
 body.dark-mode a {
-    color: #4ade80; /* Um verde mais claro e neon para brilhar no fundo preto */
+    color: #4ade80; 
 }
 
 body.dark-mode h2 {
@@ -279,15 +281,16 @@ body.dark-mode .menu-navegacao ul li a:hover {
 body.dark-mode #container-escuro { display: none !important; }
 body.dark-mode #container-claro { display: flex !important; }
 
-/* Responsividade Básica para Celulares */
+/* ==========================================
+   RESPONSIVIDADE (Ajustes para Celular)
+   ========================================== */
 @media (max-width: 768px) {
-    body {
-        margin: 1rem; /* Margem menor em telas pequenas para aproveitar espaço */
+    .conteudo-principal, #saudacao-usuario, .rodape-idioma {
+        padding: 0 1.5rem; /* Diminui a margem no celular para caber o texto */
     }
     .menu-navegacao {
         flex-direction: column;
         gap: 1rem;
-        border-radius: 8px;
     }
     .menu-navegacao ul {
         flex-wrap: wrap;
