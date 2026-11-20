@@ -161,7 +161,7 @@ hr {
 .video-centralizado {
     max-width: 650px; 
     margin: 3rem auto; 
-    border-radius: 16px; 
+    border-radius: 20px; 
     overflow: hidden; 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
     background-color: #000; 
@@ -170,7 +170,7 @@ hr {
 .video-centralizado video {
     width: 100%;
     display: block;
-    border-radius: 16px; /* Mantém a borda do vídeo redonda */
+    border-radius: 20px; /* Mantém a borda do vídeo redonda */
 }
 
 /* ==========================================
